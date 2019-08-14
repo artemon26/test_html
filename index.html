@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet/less" type="text/css" href="styles/style.less"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div>
+        <div class="logo">
+            <img src="img/logo.png" alt="Здесь должна была быть картинка">
+        </div>
+        <div class="numbers">
+            <a href="tel:+74997777777">
+                +7(499) 777-77-77
+            </a>
+            <a href="tel:+74997777777">
+                +7(499) 777-77-77
+            </a>
+        </div>
+    </div>
+</header>
+
+<menu>
+    <div class="content">
+        <div class="form">
+            <p>
+                Форма с кнопкой
+            </p>
+            <div class="formB">
+                <p>Оставь телефон и получи что-то офигенное</p>
+                <input type="text" placeholder="Введите номер" id="number">
+                <button type="submit" disabled id="giveBtn">Получить</button>
+            </div>
+        </div>
+    </div>
+</menu>
+
+<main>
+    <p class="textSlider">
+        Тут у нас слайдер
+    </p>
+
+    <div class="wrapper">
+        <input type="radio" name="point" id="slide1" checked>
+        <input type="radio" name="point" id="slide2">
+        <input type="radio" name="point" id="slide3">
+        <div class="slider">
+            <img src="img/1.png" alt="Здесь должна была быть картинка" class="slide1">
+            <img src="img/2.png" alt="Здесь должна была быть картинка" class="slide2">
+            <img src="img/3.png" alt="Здесь должна была быть картинка" class="slide3">
+            <!--<div class="slides slide1"></div>-->
+            <!--<div class="slides slide2"></div>-->
+            <!--<div class="slides slide3"></div>-->
+        </div>
+        <div class="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+    </div>
+
+    <div class="textBlock">
+        <p>Просто текстовый блок</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac
+            dui lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor
+            sit amet, commodo faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed
+            lacinia placerat accumsan. Praesent pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc
+            urna, semper non arcu ut, sagittis dapibus lorem. Nunc nec urna id velit sodales sodales. Sed porttitor quam
+            eget mollis consequat. Curabitur aliquet nec dui eget aliquet. Nulla in risus ante.
+        </p>
+    </div>
+
+    <div class="calculator">
+        <div class="textCalculator">
+            <p>
+                Калькулятор
+            </p>
+            <p>
+                (стоимость пользователь узнает по телефону)
+            </p>
+        </div>
+
+        <div class="size">
+            <div class="window">
+                <div>
+                    <img src="img/1.1.png" alt="Здесь должна была быть картинка" data-id="1">
+                </div>
+                <div>
+                    <p>Одностворчатое</p>
+                </div>
+            </div>
+
+            <div class="window">
+                <div>
+                    <img src="img/2.2.png" alt="Здесь должна была быть картинка" data-id="2">
+                </div>
+                <div>
+                    <p>Двухстворчатое</p>
+                </div>
+            </div>
+
+            <div class="window">
+                <div>
+                    <img src="img/3.3.png" alt="Здесь должна была быть картинка" data-id="3">
+                </div>
+                <div>
+                    <p>Трехстворчатое</p>
+                </div>
+            </div>
+
+            <div class="window">
+                <div>
+                    <img src="img/4.4.png" alt="Здесь должна была быть картинка" data-id="4">
+                </div>
+                <div>
+                    <p>Балконный блок</p>
+                </div>
+            </div>
+
+            <div class="window">
+                <div>
+                    <img src="img/5.5.png" alt="Здесь должна была быть картинка" data-id="5">
+                </div>
+                <div>
+                    <p>Остекление балкона</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculation">
+            <div class="imgInfo">
+                <div class="imgWindow">
+                    <p>
+                        ширина
+                    </p>
+                    <p>
+                        высота
+                    </p>
+                    <div class="imgWin">
+                        <img src="img/Big1.png" alt="Здесь должна была быть картинка" data-id="1" class="main">
+                        <img src="img/Big2.png" alt="Здесь должна была быть картинка" data-id="2">
+                        <img src="img/Big3.png" alt="Здесь должна была быть картинка" data-id="3">
+                        <img src="img/Big4.png" alt="Здесь должна была быть картинка" data-id="4">
+                        <img src="img/Big5.png" alt="Здесь должна была быть картинка" data-id="5">
+                    </div>
+                </div>
+                <div class="sizeWindow">
+                    <div>
+                        <p>
+                            ширина, см
+                        </p>
+                        <input type="text">
+                    </div>
+                    <p>
+                        x
+                    </p>
+                    <div>
+                        <p>
+                            высота, см
+                        </p>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="windowInfo">
+                <p class="nameWindow">Одностворчатое окно KBE</p>
+                <p>1. Критерий выбора </p>
+                <input type="radio" value="1" id="choice1" class="radio">
+                <label for="choice1"></label>
+                <span>пункт выбора 1</span>
+
+                <input type="radio" value="2" id="choice2" class="radio">
+                <label for="choice2"></label>
+                <span>пункт выбора 2</span>
+
+                <input type="radio" value="3" id="choice3" class="radio">
+                <label for="choice3"></label>
+                <span>пункт выбора 3</span>
+
+                <p>2. Выберите открывание створки</p>
+                <div class="list">
+                    <img src="img/arrow.png" alt="Здесь должна была быть картинка">
+                    <select>
+                        <option>Не открывается</option>
+                        <option>Открывается</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sum">
+                <div>
+                    <img src="img/user.png" alt="Здесь должна была быть картинка">
+                    <input type="text" placeholder="Введите номер">
+                </div>
+                <button type="submit">рассчитать</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div>
+        <p>просто</p>
+        <p>скромный футер</p>
+    </div>
+</footer>
+
+<!--Модалка-->
+<div id="prompt-form-container">
+    <div id="prompt-form">
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
