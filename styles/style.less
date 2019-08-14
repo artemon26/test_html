@@ -3,17 +3,14 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
-  height: 100%;
 }
 
 .content {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -24,11 +21,10 @@ header {
   flex-flow: row nowrap;
   align-items: center;
   display: flex;
-  min-width: 1000px;
 
   & > div {
     width: 1000px;
-    min-width: 1000px;
+
     margin: 0 auto;
 
     .logo {
@@ -56,7 +52,6 @@ header {
 menu {
   height: 509px;
   background: url("../img/bg.png") center;
-  min-width: 1000px;
 
   .form {
     margin: 73px 0 123px 98px;
@@ -106,7 +101,6 @@ menu {
 }
 
 main {
-  min-width: 1000px;
 
   .textSlider {
     text-align: center;
@@ -217,6 +211,7 @@ main {
 
     p:last-child {
       font: 14px 'Myriad Pro Regular';
+      text-align: justify;
     }
   }
 
@@ -503,7 +498,7 @@ footer {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  min-width: 1000px;
+
 
   div {
     width: 1000px;
