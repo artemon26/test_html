@@ -3,7 +3,8 @@ const size = document.getElementsByClassName('size')[0],
     img = imgWin.getElementsByTagName('img'),
     giveBtn = document.getElementById('giveBtn'),
     inputNumber = document.getElementById('number'),
-    nameWindow = document.getElementsByClassName('nameWindow')[0];
+    nameWindow = document.getElementsByClassName('nameWindow')[0],
+    textWindow = size.getElementsByTagName('p');
 
 inputNumber.addEventListener('keyup', () => giveBtn.disabled = !(inputNumber.value.trim() && /^((\+?375\-?)|(8\-?0))(29|25|44|33)\-?(\d{3})\-?(\d{2})\-?(\d{2})$/i.test(inputNumber.value.trim())));
 
@@ -14,7 +15,11 @@ size.addEventListener('click', event => {
     if (target.tagName === 'IMG') {
         for (let i = 0; i < img.length; i++) {
             target.dataset.id === img[i].dataset.id ? img[i].style.display = 'block' : img[i].style.display = 'none';
+            textWindow[i].classList.remove('textSize');
         }
+
+        target.parentNode.parentNode.children[1].children[0].classList.toggle('textSize');
+
         name(target.dataset.id);
 
     } else if (target.className === 'window') {
@@ -23,7 +28,11 @@ size.addEventListener('click', event => {
 
         for (let i = 0; i < img.length; i++) {
             searchImg.dataset.id === img[i].dataset.id ? img[i].style.display = 'block' : img[i].style.display = 'none';
+            textWindow[i].classList.remove('textSize');
         }
+
+        target.children[1].children[0].classList.toggle('textSize');
+
         name(searchImg.dataset.id);
 
     } else if (target.tagName === 'P') {
@@ -32,7 +41,11 @@ size.addEventListener('click', event => {
 
         for (let i = 0; i < img.length; i++) {
             searchImgP.dataset.id === img[i].dataset.id ? img[i].style.display = 'block' : img[i].style.display = 'none';
+            textWindow[i].classList.remove('textSize');
         }
+
+        target.classList.toggle('textSize');
+
         name(searchImgP.dataset.id);
     }
 
@@ -89,7 +102,7 @@ function showPrompt() {
     };
 
     document.onkeydown = function(e) {
-        if (e.key == 'Escape') {
+        if (e.key === 'Escape') {
             complete();
         }
     };
@@ -98,7 +111,9 @@ function showPrompt() {
 
 }
 
-document.getElementById('giveBtn').onclick = function() {
+giveBtn.onclick = function() {
     showPrompt();
+    giveBtn.disabled = true;
+    inputNumber.value = '';
 };
 //
